@@ -16,29 +16,34 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
+        zenkakuHankaku {
+            bindings = <&kp GRAVE>;
             key-positions = <11 12>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+        RightClick {
+            bindings = <&mkp RCLK>;
+            key-positions = <19 20>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+        prevClick {
+            bindings = <&mkp MB4>;
+            key-positions = <32 31>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+        nextClick {
+            bindings = <&mkp MB5>;
+            key-positions = <30 31>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        insertKey {
+            bindings = <&kp INS>;
+            key-positions = <6 7>;
+        };
+
+        deleteKey {
+            bindings = <&kp DELETE>;
+            key-positions = <8 7>;
         };
     };
 
@@ -60,6 +65,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        mkpt: mkpt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MKPT";
+            bindings = <&mkp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <37>;
+        };
     };
 
     keymap {
@@ -67,10 +84,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E               &kp R                        &kp T                                                     &kp Y        &kp U  &kp L      &kp O    &kp P
-&kp A             &kp S         &kp D               &kp F                        &kp G        &mkp MB1                &kp INTERNATIONAL_3  &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C               &kp V                        &kp B        &kp COLON               &lt 6 BACKSLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT BACKSPACE
-&kp LCTRL         &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &lt_to_layer_0 6 INT_HENKAN  &lt 5 SPACE  &lt_to_layer_0 1 TAB    &lt 1 BACKSPACE      &lt 2 ENTER                             &kp SLASH
+&kp Q             &kp W         &kp E               &kp R                 &kp T                                                     &kp Y        &kp U  &kp L      &kp O    &kp P
+&kp A             &kp S         &kp D               &kp F                 &kp G        &mkp MB1                &kp INTERNATIONAL_3  &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C               &kp V                 &kp B        &kp COLON               &lt 6 BACKSLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT BACKSPACE
+&kp LCTRL         &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &mkpt MB3 INT_HENKAN  &lt 5 SPACE  &lt_to_layer_0 1 TAB    &lt 1 BACKSPACE      &lt 2 ENTER                             &kp SLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -92,6 +109,8 @@
 &trans  &trans  &kp KP_NUMBER_2  &kp F11  &kp F12  &trans                &trans  &trans  &trans  &trans         &trans  &kp LC(LA(INS))
 &trans  &trans  &trans           &trans   &trans   &trans                &trans  &trans                                 &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         ARROW {
@@ -121,6 +140,8 @@
 &kp HOME  &kp PAGE_DOWN     &kp END       &kp PG_UP          &trans  &trans    &trans     &kp UNDERSCORE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSPACE
 &trans    &trans            &trans        &trans             &trans  &trans    &kp ENTER  &kp NUMBER_0                                               &kp QUESTION
             >;
+
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN>;
         };
 
         layer_6 {
