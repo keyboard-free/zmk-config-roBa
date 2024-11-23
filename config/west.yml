@@ -4,15 +4,15 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
-    - name: keyboard-free
-      url-base: https://github.com/keyboard-free
+    - name: sayu-hub
+      url-base: https://github.com/sayu-hub
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: feat/pointers-move-scroll
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: kumamuk-git
+      remote: sayu-hub
       revision: main
   self:
     path: config
