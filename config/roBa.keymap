@@ -87,7 +87,7 @@
 &kp Q      &kp W         &kp E               &kp R                 &kp T                                                     &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D               &kp F                 &kp G        &mkp MB1                &kp INTERNATIONAL_3  &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
 &kp Z      &kp X         &kp C               &kp V                 &kp B        &kp COLON               &lt 6 BACKSLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp BACKSPACE
-&kp LCTRL  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &mkpt MB3 INT_HENKAN  &lt 5 SPACE  &lt_to_layer_0 1 TAB    &lt 1 BACKSPACE      &lt 2 ENTER                             &mt RIGHT_SHIFT SLASH
+&kp LCTRL  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &mkpt MB3 INT_HENKAN  &lt 5 ENTER  &lt_to_layer_0 1 TAB    &lt 1 BACKSPACE      &lt 2 SPACE                             &mt RIGHT_SHIFT SLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
