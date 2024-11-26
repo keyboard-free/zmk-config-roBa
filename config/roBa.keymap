@@ -135,10 +135,10 @@
 
         SCROLL {
             bindings = <
-&trans    &kp LC(LG(LEFT))  &kp UP_ARROW  &kp LC(LG(RIGHT))  &trans                       &kp KP_MULTIPLY  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_PLUS
-&trans    &kp LEFT          &kp DOWN      &kp RIGHT          &trans  &trans    &trans     &kp KP_SLASH     &kp NUMBER_4  &kp N5        &kp N6        &kp KP_MINUS
-&kp HOME  &kp PAGE_DOWN     &kp END       &kp PG_UP          &trans  &trans    &trans     &kp UNDERSCORE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSPACE
-&trans    &trans            &trans        &trans             &trans  &trans    &kp ENTER  &kp NUMBER_0                                               &kp QUESTION
+&trans    &kp LC(LG(LEFT))  &kp UP_ARROW  &kp LC(LG(RIGHT))  &trans                               &kp KP_MULTIPLY  &kp NUMBER_7  &kp N8        &kp N9        &kp KP_PLUS
+&trans    &kp LEFT          &kp DOWN      &kp RIGHT          &kp SEMI        &trans    &trans     &kp KP_SLASH     &kp NUMBER_4  &kp N5        &kp N6        &kp KP_MINUS
+&kp HOME  &kp PAGE_DOWN     &kp END       &kp PG_UP          &kp APOSTROPHE  &trans    &trans     &kp UNDERSCORE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSPACE
+&trans    &trans            &trans        &trans             &trans          &trans    &kp ENTER  &kp NUMBER_0                                               &kp QUESTION
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN>;
